@@ -1,11 +1,13 @@
 let transactions = [];
 let myChart;
-
-fetch("/api/transaction")
+console.log("gfsjgelhs!!!!");
+fetch("/api/transaction", {method: "GET"})
   .then(response => {
+    console.log("hello?");
     return response.json();
   })
   .then(data => {
+    console.log(data);
     // save db data on global variable
     transactions = data;
 
